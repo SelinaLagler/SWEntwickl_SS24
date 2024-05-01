@@ -1,0 +1,9 @@
+Hallo
+here is another line 
+trying to put a 3rd line down there
+here are Names stored in String 'names': 
+
+Selina
+Karin
+Chris
+Someone
