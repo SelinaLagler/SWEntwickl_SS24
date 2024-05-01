@@ -18,11 +18,11 @@ public class PersonLoaderr {
     }
 
     public ArrayList<Person> load() throws PersonLoadException {
+        ArrayList<Person> p = new ArrayList<>();
 
-        File f = new File(path);
-        try (BufferedReader br = new BufferedReader(new FileReader(f))){
-            String lines="";
-            ArrayList<Person> p = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(path))){
+            String lines;
+
 
             while ((lines = br.readLine())!= null){
                 String[] colums = lines.split(";");
@@ -35,7 +35,7 @@ public class PersonLoaderr {
 
 
             }
-            System.out.println(p);
+
             return p;
 
         } catch (FileNotFoundException e) {
