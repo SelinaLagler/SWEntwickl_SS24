@@ -15,6 +15,8 @@ public class ClientCommunication implements Runnable{
     @Override
     public void run() {
 
+
+
     }
 
     public void handleCommands() throws PersonLoadException{
