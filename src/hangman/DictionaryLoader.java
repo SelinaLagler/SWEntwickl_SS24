@@ -10,7 +10,8 @@ public class DictionaryLoader {
         ArrayList<String> result = new ArrayList<>();
 
 
-        try (BufferedReader br = new BufferedReader(new FileReader("hangmantxt"))){
+        try (BufferedReader br = new BufferedReader(
+                new FileReader("hangmantxt"))){
             String line;
             while ((line=br.readLine())!=null){
                 result.add(line);
