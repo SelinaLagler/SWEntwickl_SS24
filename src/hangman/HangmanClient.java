@@ -4,7 +4,7 @@ import java.io.*;
 import java.net.Socket;
 import java.util.Objects;
 
-public class HangmanClient {
+public class HangmanClient implements Runnable{
 
     private Game game;
     private Socket client;
@@ -47,7 +47,7 @@ public class HangmanClient {
                 ", name='" + name + '\'' +
                 '}';
     }
-
+    @Override
     public void run() {
         try (BufferedReader br = new BufferedReader(new InputStreamReader(client.getInputStream()));
              BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()))) {
